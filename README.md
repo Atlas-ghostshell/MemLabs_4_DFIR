@@ -145,3 +145,7 @@ This investigation reinforces a core DFIR truth:
 Expect heavier artifacts, deeper pivots, and fewer hints.
 
 ---
+
+<img width="1218" height="576" alt="Screenshot 2026-02-17 114523" src="https://github.com/user-attachments/assets/2bba42d0-d88f-4a5e-96a9-d20e4cb64870" />
+<img width="1219" height="574" alt="Screenshot 2026-02-17 114115" src="https://github.com/user-attachments/assets/c1928cd0-e7ae-443e-8e29-6b52babb46db" />
+
