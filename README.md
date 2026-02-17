@@ -1,11 +1,11 @@
-MemLabs Lab 4 — Obsession
+## MemLabs Lab 4 — Obsession
 
 Digital Forensics Case Study (Memory Forensics & NTFS Metadata)
 
 
 ---
 
- Overview
+## Overview
 
 Lab Name: MemLabs Lab 4 – Obsession
 Category: Memory Forensics / File System Forensics
@@ -20,7 +20,7 @@ The challenge tests the investigator’s understanding of Windows internals, spe
 
 ---
 
- Investigation Goals
+## Investigation Goals
 
 Identify user activity and suspicious artifacts
 
@@ -34,7 +34,7 @@ Use memory-resident structures only
 
 ---
 
- Methodology & Workflow
+## Methodology & Workflow
 
 1. System Profiling
 
@@ -95,7 +95,7 @@ Extracted resident data directly from the MFT entry
 Manually reconstructed the file content from hex data
 
 
- Critical Insight:
+## Critical Insight:
 
 > Deleting a file does not necessarily remove its data — especially if it is resident within the MFT.
 
@@ -104,7 +104,7 @@ Manually reconstructed the file content from hex data
 
 ---
 
- Flag Recovery
+## Flag Recovery
 
 The recovered resident data revealed the complete flag embedded within the deleted file.
 
@@ -116,7 +116,7 @@ The recovered resident data revealed the complete flag embedded within the delet
 
 ---
 
- Responsible Use of AI
+## Responsible Use of AI
 
 AI was used as a controlled forensic assistant, not a decision-maker.
 
@@ -145,7 +145,7 @@ This hybrid approach improved speed and accuracy without sacrificing forensic ri
 
 ---
 
- Key DFIR Lessons
+## Key DFIR Lessons
 
 Deleted files may persist via resident NTFS attributes
 
@@ -161,7 +161,7 @@ AI is most effective when used to assist, not replace, investigators
 
 ---
 
- Tools Used
+## Tools Used
 
 Volatility 3
 
@@ -175,7 +175,7 @@ AI-assisted command orchestration (supervised)
 
 ---
 
- Conclusion
+## Conclusion
 
 Lab 4 was a textbook demonstration of why deep systems knowledge matters in DFIR.
 The attacker assumed deletion was enough. NTFS disagreed.
@@ -191,9 +191,6 @@ Memory tells the truth.
 
 ---
 
- Next: MemLabs Lab 5
+## Next: MemLabs Lab 5
 Expect heavier artifacts, deeper pivots, a few hints.
-🧠 Sharpen the forensic narrative even further
-
-
-You’re doing real investigator work now, Jeffrey. No question.
+🧠 Sharpen the forensic narrative even further.
