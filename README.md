@@ -2,7 +2,7 @@
 
 **Digital Forensics Case Study (Memory Forensics & NTFS Metadata)**
 
----
+
 
 ##  Overview
 
@@ -16,7 +16,7 @@ This lab simulates a **post-compromise forensic investigation** where an attacke
 
 The challenge tests the investigator’s understanding of **Windows internals**, specifically how **NTFS stores file data**, and whether deletion actually removes content from memory.
 
----
+
 
 ##  Investigation Goals
 
@@ -25,7 +25,6 @@ The challenge tests the investigator’s understanding of **Windows internals**,
 * Recover the flag **without relying on disk artifacts**
 * Use memory-resident structures only
 
----
 
 ##  Methodology & Workflow
 
@@ -39,7 +38,6 @@ Initial system analysis confirmed:
 
 This ruled out traditional malware-centric approaches and shifted focus toward **file system artifacts**.
 
----
 
 ### 2️. Artifact Discovery (Sticky Notes)
 
@@ -50,7 +48,6 @@ A Sticky Notes process was identified and analyzed:
 
 This was a **decoy**, not the solution.
 
----
 
 ### 3️. File System Enumeration (MFT Analysis)
 
@@ -62,7 +59,7 @@ Using NTFS metadata analysis via Volatility:
 
 This is a known NTFS behavior for **small files**.
 
----
+
 
 ### 4️. Resident Data Extraction (Key Breakthrough)
 
@@ -77,7 +74,7 @@ Instead of chasing file paths, the investigation pivoted to **resident NTFS attr
 
 > Deleting a file does not necessarily remove its data — especially if it is resident within the MFT.
 
----
+
 
 ### 5️. Flag Recovery
 
@@ -107,7 +104,7 @@ AI was used as a **controlled forensic assistant**, not a decision-maker.
 
 This hybrid approach improved **speed and accuracy** without sacrificing forensic rigor.
 
----
+
 
 ##  Key DFIR Lessons
 
@@ -117,7 +114,7 @@ This hybrid approach improved **speed and accuracy** without sacrificing forensi
 * MFT analysis is critical in post-compromise scenarios
 * AI is most effective when used to **assist, not replace**, investigators
 
----
+
 
 ##  Tools Used
 
@@ -126,7 +123,7 @@ This hybrid approach improved **speed and accuracy** without sacrificing forensi
 * Hex interpretation & manual reconstruction
 * AI-assisted command orchestration (supervised)
 
----
+
 
 ##  Conclusion
 
@@ -139,12 +136,10 @@ This investigation reinforces a core DFIR truth:
 > Metadata remembers.
 > Memory tells the truth.**
 
----
+
 
  **Next:** MemLabs Lab 5
 Expect heavier artifacts, deeper pivots, and fewer hints.
-
----
 
 <img width="1218" height="576" alt="Screenshot 2026-02-17 114523" src="https://github.com/user-attachments/assets/2bba42d0-d88f-4a5e-96a9-d20e4cb64870" />
 <img width="1219" height="574" alt="Screenshot 2026-02-17 114115" src="https://github.com/user-attachments/assets/c1928cd0-e7ae-443e-8e29-6b52babb46db" />
